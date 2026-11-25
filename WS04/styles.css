@@ -1,0 +1,159 @@
+/* ==========================================================
+   Workshop 4 – Page Layout Techniques
+   ========================================================== */
+
+/* ---------- Base styles ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+  background-color: #f3f5f7;
+
+  /* Whole-page layout with Grid: header, main and footer are stacked,
+     and main stretches so the footer stays at the bottom of the window */
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #e8edf2;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+/* White links in the dark footer */
+.site-footer a {
+  color: #fff;
+}
+
+/* ---------- Task 1: Semantic elements ---------- */
+.site-header {
+  background-color: #0b4f6c;
+  color: #fff;
+  padding: 1.5rem 1rem 0;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.site-header .subtitle {
+  margin: 0.25rem 0 1rem;
+  color: #cde8f5;
+}
+
+/* Navigation links in a row with Flexbox; they wrap on narrow screens */
+.site-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.site-header nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+  border-bottom-color: #8fd3f4;
+}
+
+main {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #0b4f6c;
+}
+
+.site-footer {
+  background-color: #0b4f6c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ---------- Task 2: Grid layout (2 rows x 3 columns) ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 10px; /* grid-gap in the task example; gap is its current name */
+}
+
+.grid-item {
+  background-color: lightgreen;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- Task 3: Flexbox layout ---------- */
+.flex-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 150px; /* extra height makes the vertical centring visible */
+  background-color: #eef4f8;
+  border-radius: 8px;
+}
+
+.box {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+/* ---------- Task 4: Media queries ---------- */
+.responsive-box {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Narrow screens: 600px or less */
+@media (max-width: 600px) {
+  .responsive-box {
+    background-color: lightcoral;
+  }
+}
+
+/* Wider screens: 601px or more */
+@media (min-width: 601px) {
+  .responsive-box {
+    background-color: lightseagreen;
+  }
+}

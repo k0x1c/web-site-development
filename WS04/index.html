@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop 4: page layout with semantic HTML, CSS Grid, Flexbox and media queries.">
+  <title>Workshop 4 – Page Layout Techniques</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Task 1: semantic structure – the header contains the navigation -->
+  <header class="site-header">
+    <h1>Workshop 4: Page Layout Techniques</h1>
+    <p class="subtitle">David Zani · Web Site Development</p>
+    <nav aria-label="Workshop tasks">
+      <ul>
+        <li><a href="#semantic">Semantic elements</a></li>
+        <li><a href="#grid">Grid</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+        <li><a href="#media-queries">Media queries</a></li>
+        <li><a href="#validation">Validation</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Task 1: Semantic elements -->
+    <section id="semantic">
+      <h2>Task 1: Semantic Elements</h2>
+      <p>
+        This page is built from semantic elements: a <code>&lt;header&gt;</code> with the page title and a
+        <code>&lt;nav&gt;</code> menu, a <code>&lt;main&gt;</code> area with one <code>&lt;section&gt;</code>
+        per task, and a <code>&lt;footer&gt;</code> at the bottom. The menu links jump to each section.
+      </p>
+    </section>
+
+    <!-- Task 2: Grid layout with two rows and three columns -->
+    <section id="grid">
+      <h2>Task 2: Grid Layout</h2>
+      <p>A grid with two rows and three columns.</p>
+      <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>
+      </div>
+    </section>
+
+    <!-- Task 3: Flexbox layout with three boxes side by side -->
+    <section id="flexbox">
+      <h2>Task 3: Flexbox Layout</h2>
+      <p>
+        Three boxes in a row, spread out with <code>justify-content: space-around</code> and centred
+        vertically with <code>align-items: center</code>.
+      </p>
+      <div class="flex-container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </section>
+
+    <!-- Task 4: Media queries change the background colour -->
+    <section id="media-queries">
+      <h2>Task 4: Media Queries</h2>
+      <p>
+        The box below is light coral when the window is 600px wide or narrower, and light sea green when it
+        is 601px or wider.
+      </p>
+      <div class="responsive-box">Resize the window to see the effect</div>
+    </section>
+
+    <!-- Task 5: Validation -->
+    <section id="validation">
+      <h2>Task 5: Validation</h2>
+      <p>
+        Both <code>index.html</code> and <code>styles.css</code> were checked with the W3C validator and
+        pass with no errors or warnings.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 David Zani · <a href="../index.html">All workshops</a></p>
+  </footer>
+</body>
+
+</html>
