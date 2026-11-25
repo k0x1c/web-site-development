@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b1055"/>
+      <stop offset="0.45" stop-color="#d53369"/>
+      <stop offset="0.8" stop-color="#ff9a44"/>
+      <stop offset="1" stop-color="#ffd86f"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff9a44"/>
+      <stop offset="1" stop-color="#3a1c71"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky and sun -->
+  <rect width="800" height="500" fill="url(#sky)"/>
+  <circle cx="560" cy="255" r="72" fill="#ffe66d"/>
+
+  <!-- Mountains and hills -->
+  <polygon points="0,330 140,170 260,300 380,140 520,310 640,190 800,320 800,400 0,400" fill="#4b2c7a"/>
+  <polygon points="140,170 175,210 150,205 128,222 108,207" fill="#e9d8ff"/>
+  <polygon points="380,140 420,185 392,178 370,196 345,180" fill="#e9d8ff"/>
+  <polygon points="0,360 120,260 250,350 400,240 560,350 700,270 800,340 800,400 0,400" fill="#2e8b57"/>
+
+  <!-- Trees -->
+  <polygon points="60,400 85,330 110,400" fill="#14532d"/>
+  <polygon points="95,400 125,315 155,400" fill="#166534"/>
+  <polygon points="660,400 690,320 720,400" fill="#14532d"/>
+  <polygon points="705,400 730,340 755,400" fill="#166534"/>
+
+  <!-- Lake with the sun's reflection -->
+  <rect y="400" width="800" height="100" fill="url(#lake)"/>
+  <rect x="490" y="418" width="140" height="6" rx="3" fill="#ffe66d" opacity="0.8"/>
+  <rect x="515" y="436" width="90" height="5" rx="2.5" fill="#ffe66d" opacity="0.6"/>
+  <rect x="535" y="452" width="50" height="4" rx="2" fill="#ffe66d" opacity="0.4"/>
+</svg>
