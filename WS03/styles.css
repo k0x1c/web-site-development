@@ -1,0 +1,291 @@
+/* ==========================================================
+   Workshop 3 – Advanced CSS Techniques
+   ========================================================== */
+
+/* ---------- Base styles (from Workshops 1 and 2) ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Text colour, page background colour and font size (Workshop 2, Task 2) */
+body {
+  margin: 0;
+  font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #1f2933;
+  background-color: #f3f5f7;
+}
+
+p {
+  color: #1f2933;
+}
+
+a {
+  color: #0b4f6c;
+}
+
+/* White links in the dark footer */
+.site-footer a {
+  color: #fff;
+}
+
+code {
+  font-family: Consolas, "Courier New", monospace;
+  background-color: #e8edf2;
+  padding: 0.1em 0.3em;
+  border-radius: 4px;
+}
+
+.site-header {
+  background-color: #0b4f6c;
+  color: #fff;
+  padding: 1.5rem 1rem 0;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.site-header .subtitle {
+  margin: 0.25rem 0 1rem;
+  color: #cde8f5;
+}
+
+.site-header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+.site-header nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+}
+
+/* Pseudo-classes :hover and :focus on the menu links */
+.site-header nav a:hover,
+.site-header nav a:focus {
+  border-bottom-color: #8fd3f4;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+section {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+section h2 {
+  margin-top: 0;
+  color: #0b4f6c;
+}
+
+.site-footer {
+  background-color: #0b4f6c;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* Heading, paragraph and picture (Workshop 1, Task 1) */
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 10px;
+}
+
+.about > div {
+  flex: 1 1 240px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+.about h3 {
+  margin: 0;
+}
+
+/* Padding and margin (Workshop 2, Task 3) */
+.content-box {
+  padding: 20px;
+  margin: 10px 0 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+}
+
+.content-box h3 {
+  margin-top: 0;
+}
+
+/* Table (Workshop 2, Task 4) */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* Form (Workshop 2, Task 4) */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 420px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font: inherit;
+}
+
+/* Pseudo-class :focus highlights the active field */
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #0b4f6c;
+  outline: 2px solid #8fd3f4;
+}
+
+input[type="submit"] {
+  align-self: flex-start;
+  background-color: #0b4f6c;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font: inherit;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #083a50;
+}
+
+/* ---------- Task 1: CSS Transitions ---------- */
+.transition-button {
+  background-color: lightblue;
+  padding: 10px 20px;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.transition-button:hover,
+.transition-button:focus {
+  background-color: lightcoral;
+}
+
+/* ---------- Task 2: CSS Animations ---------- */
+.animation-box {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+  position: relative;
+  animation: move 2s infinite alternate;
+}
+
+@keyframes move {
+  from {
+    left: 0;
+  }
+
+  to {
+    left: 100px;
+  }
+}
+
+/* ---------- Task 3: CSS Pseudo-classes ---------- */
+.pseudo-list {
+  list-style: none;
+  padding: 0;
+  max-width: 320px;
+  border: 1px solid #ddd;
+}
+
+.pseudo-list li {
+  padding: 8px 12px;
+}
+
+.pseudo-list li:nth-child(odd) {
+  background-color: lightgray;
+}
+
+.pseudo-list li:nth-child(even) {
+  background-color: white;
+}
+
+/* ---------- Task 4: CSS Filters ---------- */
+.filter-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.filter-image:hover {
+  filter: grayscale(0%);
+}
+
+/* ---------- Task 5: CSS Pseudo-elements ---------- */
+.quote {
+  position: relative;
+  padding-left: 30px;
+  font-style: italic;
+}
+
+.quote::before {
+  content: "\201C"; /* the “ character */
+  font-family: Georgia, serif;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: lightgray;
+}

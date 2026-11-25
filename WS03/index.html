@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Workshop 3: CSS transitions, animations, pseudo-classes, filters and pseudo-elements.">
+  <title>Workshop 3 – Advanced CSS Techniques</title>
+  <!-- External CSS (Workshop 2, Task 1) -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Internal CSS (Workshop 2, Task 1) -->
+  <style>
+    .about h3 {
+      color: #0b4f6c;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1>Workshop 3: Advanced CSS Techniques</h1>
+    <p class="subtitle">David Zani · Web Site Development</p>
+    <nav aria-label="Workshop tasks">
+      <ul>
+        <li><a href="#transitions">Transitions</a></li>
+        <li><a href="#animations">Animations</a></li>
+        <li><a href="#pseudo-classes">Pseudo-classes</a></li>
+        <li><a href="#filters">Filters</a></li>
+        <li><a href="#pseudo-elements">Pseudo-elements</a></li>
+        <li><a href="#base-page">Base page</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Task 1: CSS Transitions -->
+    <section id="transitions">
+      <h2>Task 1: CSS Transitions</h2>
+      <p>The button changes its background colour smoothly from light blue to light coral when you hover over it.</p>
+      <button class="transition-button" type="button">Hover me</button>
+    </section>
+
+    <!-- Task 2: CSS Animations -->
+    <section id="animations">
+      <h2>Task 2: CSS Animations</h2>
+      <p>The green box moves from left to right and back again continuously.</p>
+      <div class="animation-box"></div>
+    </section>
+
+    <!-- Task 3: CSS Pseudo-classes -->
+    <section id="pseudo-classes">
+      <h2>Task 3: CSS Pseudo-classes</h2>
+      <p>
+        Every other item has a different background colour, using <code>:nth-child(odd)</code> and
+        <code>:nth-child(even)</code>.
+      </p>
+      <ul class="pseudo-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+      </ul>
+    </section>
+
+    <!-- Task 4: CSS Filters -->
+    <section id="filters">
+      <h2>Task 4: CSS Filters</h2>
+      <p>The image is shown in grayscale. Hover over it to see it in full colour.</p>
+      <img src="./images/sunset.svg" alt="Illustration of mountains and a lake at sunset" class="filter-image"
+        width="400" height="250">
+    </section>
+
+    <!-- Task 5: CSS Pseudo-elements -->
+    <section id="pseudo-elements">
+      <h2>Task 5: CSS Pseudo-elements</h2>
+      <p>The quotation mark in front of the quote is added with the <code>::before</code> pseudo-element.</p>
+      <blockquote class="quote">
+        This is a sample quote.
+      </blockquote>
+    </section>
+
+    <!-- Base page: HTML structure and CSS styling from Workshops 1 and 2 -->
+    <section id="base-page">
+      <h2>Base Page from Workshops 1 and 2</h2>
+      <p>
+        This part of the page has the basic HTML structure from the earlier workshops: a heading with my name, a
+        paragraph and a picture, lists, a link, a box with padding and margin, a table and a form, all styled with CSS.
+      </p>
+
+      <!-- Workshop 1, Task 1: heading for my name, paragraph about me and a picture -->
+      <div class="about">
+        <img src="./images/avatar.svg" alt="Avatar of David Zani" class="avatar" width="120" height="120">
+        <div>
+          <h3>David Zani</h3>
+          <!-- Inline CSS (Workshop 2, Task 1) -->
+          <p style="font-size: 1.05rem;">
+            I am a student at Laurea University of Applied Sciences. This is my practice page for the Web Site
+            Development course.
+          </p>
+        </div>
+      </div>
+
+      <h3>Workshops in this course</h3>
+      <ol>
+        <li>HTML Basics</li>
+        <li>CSS Fundamentals</li>
+        <li>Advanced CSS Techniques</li>
+        <li>Page Layout Techniques</li>
+        <li>Responsive Design</li>
+        <li>Bootstrap</li>
+      </ol>
+
+      <h3>Tools used in the course</h3>
+      <ul>
+        <li>Visual Studio Code</li>
+        <li>Git and GitHub</li>
+        <li>A web browser with developer tools</li>
+      </ul>
+
+      <p>
+        The workshop instructions are on the
+        <a href="https://laurea-ammattikorkeakoulu-tikkurila.github.io/Verkkosivut-OPS25/WS01/">course workshop
+          site</a>.
+      </p>
+
+      <div class="content-box">
+        <h3>Sample Heading</h3>
+        <p>This is a sample paragraph inside a div element.</p>
+      </div>
+
+      <h3>Course points</h3>
+      <table>
+        <tr>
+          <th>Part</th>
+          <th>Maximum points</th>
+        </tr>
+        <tr>
+          <td>Module quizzes</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>Workshop assignments</td>
+          <td>35</td>
+        </tr>
+        <tr>
+          <td>Website project</td>
+          <td>30</td>
+        </tr>
+        <tr>
+          <td>Course feedback</td>
+          <td>1</td>
+        </tr>
+      </table>
+
+      <h3>Contact form</h3>
+      <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4"></textarea>
+        <input type="submit" value="Send">
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 David Zani · <a href="../index.html">All workshops</a></p>
+  </footer>
+</body>
+
+</html>
